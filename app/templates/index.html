@@ -1,2 +1,15 @@
-{{ip}}
-<p>{{ request.META.REMOTE_ADDR }}</p>
+{% extends 'base.html' %}
+
+
+{% block head_title %}
+Gt your IP Address
+{% endblock head_title %}
+
+
+
+{% block content %}
+<div class="text-center py-5 my-5">
+    <p class="display-1">Your IP Address is <span title="Your IP  Address"
+            class="text-success">{{ request.META.REMOTE_ADDR }}</span></p>
+</div>
+{% endblock content %}
